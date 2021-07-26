@@ -36,16 +36,19 @@ public class User {
     @Column(name = "phone_number")
     private String phoneNumber;
 
-    @OneToOne
-    @JoinColumn(name="address",referencedColumnName = "id")
+    @Column(name = "cell_phone")
+    private String cellPhone;
+
+
+    @OneToOne(cascade = {CascadeType.MERGE})
+    @JoinColumn(name="address",referencedColumnName = "id",unique = true)
     private UserAddress address;
 
 //    @Column(name = "address")
 //    private Long address;
 
 
-    @Column(name = "cell_phone")
-    private String cellPhone;
+
 
 
 }

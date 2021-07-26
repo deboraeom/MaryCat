@@ -1,6 +1,5 @@
-package com.example.MaryCatqapi.dto.UserAddress;
+package com.example.MaryCatqapi.dto.ChurchAddressDTO;
 
-import com.example.MaryCatqapi.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,11 +11,11 @@ import javax.validation.constraints.NotNull;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserAddressDTO {
+public class ChurchAddressPutDTO {
     private Long id;
 
     @NotNull(message="Address Number can't be null")
-    private String addessesNumber;
+    private String addressesNumber;
 
     @NotNull(message="Street Number can't be null")
     private String street;
@@ -29,7 +28,5 @@ public class UserAddressDTO {
 
     @NotNull(message="UF Number can't be null")
     private String uf;
-
-    @NotNull(message="User Number can't be null")
-    private Long usersId;
+//
 }

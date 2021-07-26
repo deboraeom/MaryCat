@@ -34,5 +34,9 @@ public class Church {
    @JoinColumn(name = "parishes_id" ,referencedColumnName = "id")
    private Parish parishes_id;
 
+    @OneToOne(cascade = {CascadeType.MERGE})
+    @JoinColumn(name="address",referencedColumnName = "id",unique = true)
+    private ChurchAddress address;
+
 
 }

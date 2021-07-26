@@ -1,5 +1,7 @@
 package com.example.MaryCatqapi.dto;
 
+import com.example.MaryCatqapi.dto.ChurchAddressDTO.ChurchAddressPostDTO;
+
 import com.example.MaryCatqapi.entity.Parish;
 import com.example.MaryCatqapi.enums.type;
 import lombok.AllArgsConstructor;
@@ -9,6 +11,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 
@@ -36,4 +39,7 @@ public class ChurchDTO {
 
     @NotNull @NotEmpty @NotBlank(message="Preencha corretamente o campo paróquia")
     private Parish parishes_id;
+
+    @Valid
+    private ChurchAddressPostDTO address;
 }

@@ -1,6 +1,5 @@
 package com.example.MaryCatqapi.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,9 +9,10 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name="users_adresses")
-public class UserAddress {
+@Table(name="churches_adresses")
+@Entity(name="ChurchAddress")
+public class ChurchAddress {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,8 +31,5 @@ public class UserAddress {
 
     @Column(nullable = false)
     private String uf;
-
-
-
 
 }
