@@ -7,88 +7,90 @@
 
 <p> 1.0 Paróquia/Parish </p>
 
-  .Os campos de paróquia são/The parish fields are:
-     .Long id, String name,String cnpj.
+ <ul>  <li>.Os campos de paróquia são/The parish fields are:
+     .Long id, String name,String cnpj.</li>
 
-  .Para criar/Create:      
+   <li>.Para criar/Create:      
      . http://localhost:8080/parishes
-     . É necessário enviar um Json com os campos name e email preenchidos. On body, is necessary to be send a Json with fields name and email 
+     . É necessário enviar um Json com os campos name e email preenchidos. On body, is necessary to be send a Json with fields name and email </li>
 
-  . Para consultar/ Find:      
-     .http://localhost:8080/parishes/{id}
+  <li> . Para consultar/ Find:      
+     .http://localhost:8080/parishes/{id}</li>
   
-  . Para consultar todas/ Find all:
+ <li>  . Para consultar todas/ Find all:
       http://localhost:8080/parishes
 
-. Para consultar por nome ou cnpj/ Find by name or cnpj:
-      http://localhost:8080/parishes/findList?search="the search"
+ <li>. Para consultar por nome ou cnpj/ Find by name or cnpj:
+      http://localhost:8080/parishes/findList?search="the search"</li>
 
-  . Para Atualizar/ Update:
+  <li> . Para Atualizar/ Update:
 
        .http://localhost:8080/parishes
-       . É necessário enviar um Json com todos os campos preenchidos. On body, is necessary to be send a Json with all field.
+       . É necessário enviar um Json com todos os campos preenchidos. On body, is necessary to be send a Json with all field.</li>
 
-  . Para deletar/ to delete
-       .http://localhost:8080/parishes/{id}
+  <li> . Para deletar/ to delete
+       .http://localhost:8080/parishes/{id}</li>
+
+</ul>
 
 <p> 2.0 Igreja/Church </p>
-
-  .Os campos de Igreja são/The Igreja fields are:
+ <ul>
+  <li>.Os campos de Igreja são/The Igreja fields are:
      .Long id, String name,String email,String phone_number, type type, Parish parishes_id, ChurchAddress address.
   .Os campos de  Endereço do Usuário são/The UserAddress fields are:
-      .Long id,String addressesNumber,String street,String neighborhood, String city, String uf.
+      .Long id,String addressesNumber,String street,String neighborhood, String city, String uf.</li>
 
-  .Para criar/Create:      
+  <li>.Para criar/Create:      
      . http://localhost:8080/churches/
      . É necessário enviar um Json com os campos name, email, phone_number, type and parishes_id  preenchidos, e se for eviado o endereço, exceto id, todos os campos tem que ser enviados. On body, is necessary to be send a Json with fields name, email, phone_number, type and parishes_id.
-                                                                                                                                                                                            If UserAdress is send, without id from ChurchAddress, all fields are necessary. 
+                                                                                                                                                                                            If UserAdress is send, without id from ChurchAddress, all fields are necessary. </li>
 
-  . Para consultar/ Find:      
-     .http://localhost:8080/churches/{id}
+  <li>. Para consultar/ Find:      
+     .http://localhost:8080/churches/{id}</li>
   
-  . Para consultar todas/ Find all:
-     http://localhost:8080/churches/
+  <li>. Para consultar todas/ Find all:
+     http://localhost:8080/churches/</li>
 
-. Para consultar por nome ou cnpj/ Find by name or cnpj:
-      http://localhost:8080/churches/findList?search="the search"
+<li>. Para consultar por nome ou cnpj/ Find by name or cnpj:
+      http://localhost:8080/churches/findList?search="the search"</li>
 
- . Para Atualizar/ Update:
+ <li>. Para Atualizar/ Update:
 
        .http://localhost:8080/churches
-       .  É necessário enviar um Json com os campos id, name, email, phone_number, type and parishes_id  preenchidos. On body, is necessary to be send a Json with fields id, name, email, phone_number, type and parishes_id. 
+       .  É necessário enviar um Json com os campos id, name, email, phone_number, type and parishes_id  preenchidos. On body, is necessary to be send a Json with fields id, name, email, phone_number, type and parishes_id. </li>
 
-  . Para deletar/ to delete
-       .http://localhost:8080/churches/{id}
-
+  <li>. Para deletar/ to delete
+       .http://localhost:8080/churches/{id}</li>
+</ul>
 <p> 3.0 Usuário/User </p>
-
-  .Os campos de Usuário são/The User fields are:
+ <ul>
+  <li>.Os campos de Usuário são/The User fields are:
      .Long id, String name,String password, String cellphoneNumber, String email, String password, String phoneNumber, String cellPhone, UserAddress address.
   .Os campos de  Endereço do Usuário são/The UserAddress fields are:
-     .Long id,String addressesNumber,String street,String neighborhood, String city, String uf.
+     .Long id,String addressesNumber,String street,String neighborhood, String city, String uf.</li>
 
 
-  .Para criar/Create:      
+  <li>.Para criar/Create:      
      . http://localhost:8080/users/
      . É necessário enviar um Json com os campos name, email,password  preenchidos e se for eviado o endereço, exceto id, todos os campos tem que ser enviados. On body, is necessary to be send a Json with fields name, email, password. 
-                                                                                                                                                                If UserAdress is send, without id from UserAddress, all fields are necessary.
-  . Para consultar/ Find:      
-     .http://localhost:8080/users/{id}
+                                                                                                                                                                If UserAdress is send, without id from UserAddress, all fields are necessary.</li>
+  <li>. Para consultar/ Find:      
+     .http://localhost:8080/users/{id}</li>
   
-  . Para consultar todas/ Find all:
-     http://localhost:8080/users/
+ <li> . Para consultar todas/ Find all:
+     http://localhost:8080/users/</li>
 
-. Para consultar por nome ou cnpj/ Find by name or email or birthdays between dates:
-      http://localhost:8080/users/findList?email="email"&name="name"&andress="andress"&beginDate="beginDate"&endDate="endDate"
+<li>. Para consultar por nome ou cnpj/ Find by name or email or birthdays between dates:
+      http://localhost:8080/users/findList?email="email"&name="name"&andress="andress"&beginDate="beginDate"&endDate="endDate"</li>
 
- . Para Atualizar/ Update:
+ <li>. Para Atualizar/ Update:
 
        .http://localhost:8080/users/
-       .  É necessário enviar um Json com os campos id, name, email,password  preenchidos. On body, is necessary to be send a Json with fields id,name, email,password.
+       .  É necessário enviar um Json com os campos id, name, email,password  preenchidos. On body, is necessary to be send a Json with fields id,name, email,password.</li>
 
-  . Para deletar/ to delete
-       .http://localhost:8080/users/{id}
-
+  <li> . Para deletar/ to delete
+       .http://localhost:8080/users/{id}</li>
+</ul>
 <p> 4.0 ChurchHasUser </p>
 Em andamento
 
